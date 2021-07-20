@@ -19,8 +19,8 @@ function draw(){
   background(220);
   speed=map(y,limity,height,0.1,20); // 속도 변동 함수.
 
-  stroke(0,0,0);
-  colorMode(HSB,100);
+  stroke(0,0,0);          // 테두리 색 결정.
+  colorMode(HSB,100);     // color mode
   t=map(mouseX,0,width,0,100,true);
   fill(t,100,100);
   
@@ -29,11 +29,11 @@ function draw(){
   
   if(mouseIsPressed){going_up=0;}
   else{
-  if (going_up==0){
-    y=y+speed;
-  } else {
-    y=y-speed;
-  }
+    if (going_up==0){
+      y=y+speed;
+    } else {
+      y=y-speed;
+    }
   }
   
   if(y>height-10){
